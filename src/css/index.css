@@ -84,3 +84,26 @@ body {
 #editor-toolbox .group:not(:last-child) {
     margin-bottom: 10px;
 }
+
+#playground-editor-container {
+    position: fixed;
+
+    width: 300px;
+    height: 330px;
+
+    right: 30px;
+    top: 30px;
+
+    box-shadow: 0px 0px 2px 1px #aeaeae;
+
+    z-index: 9999;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#playground-editor-header {
+    height: 30px;
+    width: 100%;
+    background-color: #ddd;
+    border-bottom: solid 1px #ccc;
+}

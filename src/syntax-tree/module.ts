@@ -9,6 +9,7 @@ import { EventRouter } from "../editor/event-router";
 import { EventStack } from "../editor/event-stack";
 import { Context, Focus } from "../editor/focus";
 import { Hole } from "../editor/hole";
+import { PlaygroundEditor } from "../editor/playground-editor";
 import { loadToolboxFromJson, updateButtonsVisualMode } from "../editor/toolbox";
 import { Validator } from "../editor/validator";
 import { ConstructHighlight } from "../notification-system/notification";
@@ -57,6 +58,7 @@ export class Module {
     notificationSystem: NotificationSystemController;
     menuController: MenuController;
     typeSystem: TypeChecker;
+    playgroundEditor: PlaygroundEditor;
 
     scope: Scope;
     draftExpressions: DraftRecord[];
@@ -74,6 +76,7 @@ export class Module {
         this.typeSystem = new TypeChecker(this);
         this.variableController = new VariableController(this);
         this.actionFilter = new ActionFilter(this);
+        this.playgroundEditor = new PlaygroundEditor();
 
         this.globals = {
             hoveringOverCascadedMenu: false,
